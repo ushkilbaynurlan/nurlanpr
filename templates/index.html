@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>USHKILBAY UNIVERSITY</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../static/logo.png" alt="logo" class="logo" />
+        <p>
+
+ </p>
+      <img src="../static/photo.png" alt="photo" class="photo" />
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+
+
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>ИИН:</h3>
+          <input
+            type="text"
+            name="IIN"
+            placeholder="ИИН енгіз"
+          />
+
+        <div class="form-group">
+          <h3>Аты:</h3>
+          <input
+            type="text"
+            name="aty"
+            placeholder="Атыңды жаз"
+          />
+          <div class="form-group">
+          <h3>Фамилия:</h3>
+          <input
+            type="text"
+            name="familiya"
+            placeholder="Фамилияңды жаз"
+          />
+        </div>
+            <div class="form-group">
+          <h3>Регион:</h3>
+          <select name="region">
+            <option value="">Регионды таңда</option>
+            <option value="Мангистау">Мангистау</option>
+            <option value="Алматы">Алматы</option>
+            <option value="Астана">Астана</option>
+            <option value="Караганда">Караганда</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3>Төлем түрі:</h3>
+          <input type="radio" name="oplata" value="грант" /> грант
+          <input type="radio" name="oplata" value="платный" /> платный
+        </div>
+          <div class="form-group">
+          <h3>Мамандық:</h3><br>
+          <input type="radio" name="mamandyk" value="Вычислительная техника и ПО" /> Вычислительная техника и програмное обеспечение(ВТПО)  </br>
+         <br> <input type="radio" name="mamandyk" value="Системы информационный безопастности" /> Системы информационный безопастности(СИБ) </br>
+        </div>
+        <div class="form-group">
+          <h3>Басқада мәліметтер</h3>
+          <textarea
+            name="comment"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Басқада мәліметтер"
+          ></textarea>
+        </div>
+        <input type="submit" value="Жіберу" class="btn" />
+      </form>
+
+    </div>
+  </body>
+</html>
