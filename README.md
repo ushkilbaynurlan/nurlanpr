@@ -1,11 +1,11 @@
 # nurlanpr
 
-DataBase App: SqlalChemy.   
+DataBase App: SqlalChemy 
+DataBase: PostgreSQL
 
 - pip install pipenv
-- pipenv install flask-sqlalchemy
+- pipenv install flask flask-sqlalchemy
 - pipenv install psycopg2
 
 
-DataBase: PostgreSQL
 
